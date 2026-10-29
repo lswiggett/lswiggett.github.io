@@ -30,6 +30,10 @@ body, _ = exporter.from_notebook_node(nb)
 
 h1 = re.search(r"<h1[^>]*>(.*?)</h1>", body, re.S)
 title = "Review: " + re.sub(r"<[^>]+>|¶", "", h1.group(1)).strip() if h1 else "Review"
+description = f"Luke Swiggett reviews {title.removeprefix('Review: ')}, evaluating its argument, data, design, and audience."
+page_url = "https://lswiggett.github.io/" + review_dir.relative_to(site_root).as_posix() + "/"
+first_img = re.search(r'<img[^>]*src="([^"]+)"', body)
+og_image = f'\n\t<meta property="og:image" content="{page_url}{first_img.group(1)}">' if first_img else ""
 
 page = f"""<!DOCTYPE html>
 <html lang="en">
@@ -37,8 +41,10 @@ page = f"""<!DOCTYPE html>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>{title} | Luke Jordan Swiggett</title>
+	<meta name="description" content="{description}">
 	<meta property="og:title" content="{title}">
-	<meta property="og:type" content="article">
+	<meta property="og:description" content="{description}">
+	<meta property="og:type" content="article">{og_image}
 	<link rel="icon" href="{to_root}assets/favicon.svg" type="image/svg+xml">
 	<link rel="stylesheet" href="{to_root}style.css">
 	<link rel="stylesheet" href="{to_root}reviews/review.css">
