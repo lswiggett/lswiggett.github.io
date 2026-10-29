@@ -3,15 +3,25 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Luke Jordan Swiggett | Portfolio</title>
+	<title>Projects | Luke Jordan Swiggett</title>
+	<meta name="description" content="Data projects and writing by Luke Swiggett, including interactive dashboards and digital history reviews.">
+	<meta property="og:title" content="Projects | Luke Jordan Swiggett">
+	<meta property="og:description" content="Data projects and writing from Denison University coursework.">
+	<meta property="og:type" content="website">
+	<meta property="og:image" content="https://lswiggett.github.io/assets/portfolio/slave-trade-dashboard.png">
+	<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
 	<header class="site-header">
 		<div class="container nav-wrapper">
-			<a class="site-title" href="index.html">Luke Jordan Swiggett</a>
-			<nav aria-label="Main navigation">
-				<a href="portfolio.html" aria-current="page">Portfolio</a>
+			<a class="site-title" href="index.html">Luke Swiggett</a>
+			<nav class="site-nav" aria-label="Main navigation">
+				<a class="nav-hide-sm" href="index.html#experience">Experience</a>
+				<a href="portfolio.html" aria-current="page">Projects</a>
+				<a class="nav-hide-sm" href="index.html#about">About</a>
+				<a href="index.html#contact">Contact</a>
+				<a class="nav-resume" href="assets/resume.pdf">Resume</a>
 			</nav>
 		</div>
 	</header>
@@ -19,16 +29,16 @@
 	<main class="container page-content">
 		<section aria-labelledby="portfolio-heading">
 			<p class="eyebrow">Selected work</p>
-			<h1 id="portfolio-heading">Portfolio</h1>
-			<p class="lead">Projects and writing from my coursework at Denison University.</p>
-			<ul class="portfolio-list" aria-label="Class assignments">
+			<h1 id="portfolio-heading">Projects</h1>
+			<p class="lead">Data projects and writing from my coursework at Denison University.</p>
+			<ul class="project-list">
 				<li>
 					<a class="project-card" href="https://slave-trade-voyages-analysis.onrender.com/" target="_blank" rel="noopener">
 						<div class="project-thumb">
 							<img src="assets/portfolio/slave-trade-dashboard.png" alt="" loading="lazy">
 						</div>
 						<div class="project-body">
-							<p class="project-meta">Interactive Dashboard · Python, Dash &amp; Plotly · October 2026</p>
+							<p class="project-meta">Interactive dashboard · Python, Dash &amp; Plotly · October 2026</p>
 							<h2 class="project-title">The Trans-Atlantic Slave Trade to the Americas, 1520–1866</h2>
 							<p class="project-summary">An interactive dashboard built on more than 20,000 voyage records from the Trans-Atlantic Slave Trade Database. Filter by year range to compare people embarked in Africa with those who survived to disembark in the Americas, and break the trade down by flag, place of purchase, place of landing, demographics, and recorded resistance.</p>
 							<span class="project-cta">Explore the dashboard <span aria-hidden="true">↗</span></span>
@@ -41,7 +51,7 @@
 							<img src="reviews/mapping-inequality/images/figure2b.jpg" alt="" loading="lazy">
 						</div>
 						<div class="project-body">
-							<p class="project-meta">Digital History Review · October 2026</p>
+							<p class="project-meta">Digital history review · October 2026</p>
 							<h2 class="project-title"><em>Mapping Inequality: Redlining in New Deal America</em></h2>
 							<p class="project-summary">An evaluation of the University of Richmond’s interactive atlas of 1930s HOLC redlining maps: its argument, its data, its design, and the audiences it serves.</p>
 							<span class="project-cta">Read the review <span aria-hidden="true">→</span></span>
@@ -53,8 +63,13 @@
 	</main>
 
 	<footer class="site-footer">
-		<div class="container">
+		<div class="container footer-inner">
 			<p>&copy; 2026 Luke Jordan Swiggett</p>
+			<div class="footer-links">
+				<a href="mailto:swigge_l2@denison.edu">Email</a>
+				<a href="https://www.linkedin.com/in/lukeswiggett" target="_blank" rel="noopener">LinkedIn</a>
+				<a href="https://github.com/lswiggett" target="_blank" rel="noopener">GitHub</a>
+			</div>
 		</div>
 	</footer>
 </body>
